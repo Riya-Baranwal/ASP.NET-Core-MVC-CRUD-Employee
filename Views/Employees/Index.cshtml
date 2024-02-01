@@ -1,0 +1,43 @@
+﻿@model List<MVCCRUD.Models.Employee>
+@{
+}
+@*<h1>Employees List</h1>*@
+
+<style>
+    .heading-3 {
+        display: inline-block;
+        border-bottom: 3px solid #808cf8;
+        padding-bottom: 5px;
+    }
+</style>
+<center><h1 id="myheading" class="heading-3">Employees Records</h1></center>
+<br />
+<marquee>Click on Edit button for more details or edit record!</marquee>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Department</th>
+            <th>DOJ</th>
+            <th> </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in Model)
+        {
+            <tr>
+                <td>@employee.Id</td>
+                <td>@employee.Name</td>
+                <td>@employee.Email</td>
+                <td>@employee.Phone</td>
+                <td>@employee.Department</td>
+                <td>@employee.DOJ.ToString("dd-mm-yyyy")</td>
+                <td><a href="Employees/ViewEmployee/@employee.Id">Edit</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

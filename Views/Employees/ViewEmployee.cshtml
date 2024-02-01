@@ -1,0 +1,42 @@
+﻿@model MVCCRUD.Models.UpdateEmployeeView
+
+@*<h1>Edit Employee</h1>*@
+<style>
+    .heading-3 {
+        display: inline-block;
+        border-bottom: 3px solid #808cf8;
+        padding-bottom: 5px;
+    }
+</style>
+<center><h1 id="myheading" class="heading-3">Edit Employees Record</h1></center>
+
+<form method="post" action="ViewEmployee" class="mt-5">
+    <div class="mb-3">
+        <label for="" class="form-label">Id</label>
+        <input type="text" class="form-control" asp-for="Id" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Name</label>
+        <input type="text" class="form-control" asp-for="Name">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email</label>
+        <input type="email" class="form-control" asp-for="Email">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Phone</label>
+        <input type="number" class="form-control" asp-for="Phone">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Department</label>
+        <input type="text" class="form-control" asp-for="Department">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">DOJ</label>
+        <input type="date" class="form-control" asp-for="DOJ">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+    <button type="submit" class="btn btn-danger" asp-action="DeleteEmployee" asp-controller="Employees">Delete</button>
+</form>

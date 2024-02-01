@@ -1,0 +1,39 @@
+﻿@model MVCCRUD.Models.AddEmployeeView
+
+@*<h1>New Talent Record Entry</h1>*@
+<style>
+    .heading-3 {
+        display: inline-block;
+        border-bottom: 3px solid #808cf8;
+        padding-bottom: 5px;
+    }
+</style>
+<center><h1 id="myheading" class="heading-3">New Employee Registration</h1></center>
+<marquee>Thanks for joining us!</marquee>
+<form method="post" action="AddEmployee" class="mt-5">
+    <div class="mb-3">
+        <label for="" class="form-label">Name</label>
+        <input type="text" class="form-control" asp-for="Name">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email</label>
+        <input type="email" class="form-control" asp-for="Email">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Phone</label>
+        <input type="number" class="form-control" asp-for="Phone">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Department</label>
+        <input type="text" class="form-control" asp-for="Department">
+    </div>
+    
+    <div class="mb-3">
+        <label for="" class="form-label">DOJ</label>
+        <input type="date" class="form-control" asp-for="DOJ">
+    </div>
+    
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
